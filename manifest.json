@@ -1,0 +1,30 @@
+{
+  "name": "Parent Scout",
+  "type": "parent-scout",
+  "tagName": "parent-scout",
+  "version": 0.1,
+  "description": "Embeds script in ad's parent and sends back parent window information like deviceorientation, size, and scroll.",
+  "files": {
+    "js": [
+      "Enabler-parent-scout-v0.1.js",
+      "parent-scout-v0.1.js",
+      "parent-scout.js"
+    ]
+  },
+  "attributes": [],
+  "events": [
+    {
+      "name": "recieved_parent_scout_message",
+      "label": "Recieved message from parent scout",
+      "description": "If a parent-scout script was sent out into the parent window scope, it will send back size, scroll, deviceorientation, and devicemotion data. This event catches it and passes the data as the parameter.",
+      "parameters": [{
+        "name": "data",
+        "label": "Data",
+        "type": "object",
+        "optional": true
+      }]
+    }
+  ],
+  "methods": [],
+  "nestable": false
+}
